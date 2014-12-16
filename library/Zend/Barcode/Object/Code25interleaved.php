@@ -83,7 +83,9 @@ class Code25interleaved extends Code25
 
         // Encoded $text
         $text = $this->getText();
-        for ($i = 0, $len = strlen($text); $i < $len; $i += 2) { // Draw 2 chars at a time
+
+        // Draw 2 chars at a time ($i)
+        for ($i = 0, $len = strlen($text); $i < $len; $i += 2) {
             $char1 = substr($text, $i, 1);
             $char2 = substr($text, $i + 1, 1);
 
